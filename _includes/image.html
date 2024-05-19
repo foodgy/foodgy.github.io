@@ -1,0 +1,14 @@
+<figure class="pb-8">
+    {%- if include.link -%}
+    <a href="/assets/img/{{ page.path | remove: '_posts' | remove: '.md' }}/{{ include.link | default:include.file }}" rel="nofollow noopener" target="_blank">
+    {%- endif -%}
+        <img src="/assets/img/{{ page.path | remove: '_posts' | remove: '.md' }}/{{ include.file }}" alt="{{ include.alt | default:include.caption }}" />
+    {%- if include.link -%}
+    </a>
+    {%- endif -%}
+    {%- if include.caption -%}
+    <figcaption class="italic text-sm mt-3">
+        {{ include.caption }}
+    </figcaption>
+    {%- endif -%}
+</figure>

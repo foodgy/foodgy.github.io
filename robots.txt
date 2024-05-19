@@ -1,0 +1,17 @@
+---
+layout: null
+sitemap: false
+---
+
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /about/
+
+# Yandex Only
+User-agent: Yandex
+Disallow: /about/
+
+Sitemap: {{ site.url }}/sitemap.xml
+Host: {{ site.url | remove: 'https://' }}

@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+{%- include header.html -%}
+<main>
+  <article>
+    <h1 class="font-sans font-black text-[40px] leading-[44px] dark:text-white">
+      {{- page.headline | default:post.title -}}
+    </h1>
+    <p class="mt-2 text-[13px] text-gray-700 dark:text-gray-300">
+      {{- page.date | date: '%-d' }}
+      {% assign month = page.date | date: '%-m' %}
+      {% case month %}
+        {% when '1' %}января
+        {% when '2' %}февраля
+        {% when '3' %}марта
+        {% when '4' %}апреля
+        {% when '5' %}мая
+        {% when '6' %}июня
+        {% when '7' %}июля
+        {% when '8' %}августа
+        {% when '9' %}сентября
+        {% when '10' %}октября
+        {% when '11' %}ноября
+        {% when '12' %}декабря
+      {% endcase %}
+      {{ page.date | date: '%Y' -}}
+    </p>
+    <div class="markdown mt-10">
+      {{ content }}
+    </div>
+  </article>
+  {%- include footer.html -%}
+</main>

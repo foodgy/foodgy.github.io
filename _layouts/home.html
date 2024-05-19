@@ -1,0 +1,41 @@
+---
+layout: base
+---
+{%- include header.html -%}
+<main>
+  <div class="relative -top-[10px] flex flex-col gap-8">
+    {%- assign array = 'text-pink-500/85 dark:text-pink-300,text-fuchsia-700/70 dark:text-fuchsia-300,text-purple-800/70 dark:text-purple-300' | split: ',' -%}
+    {%- for post in site.posts -%}
+    {%- assign color = array[forloop.index0] -%}
+    <article>
+      <a class="block py-4 transition ease-in-out hover:scale-[1.005] focus:scale-100 duration-200" href="{{ post.url | absolute_url }}">
+        <h2 class="font-sans {{ color | default: 'text-violet-900/80 dark:text-violet-300' }} font-black text-[28px]">
+          {{- post.headline | default:post.title -}}
+        </h2>
+        <p class="text-[13px] text-gray-700 dark:text-gray-300">
+          {{- post.date | date: '%-d' }}
+          {% assign month = post.date | date: '%-m' %}
+          {% case month %}
+            {% when '1' %}января
+            {% when '2' %}февраля
+            {% when '3' %}марта
+            {% when '4' %}апреля
+            {% when '5' %}мая
+            {% when '6' %}июня
+            {% when '7' %}июля
+            {% when '8' %}августа
+            {% when '9' %}сентября
+            {% when '10' %}октября
+            {% when '11' %}ноября
+            {% when '12' %}декабря
+          {% endcase %}
+          {{ post.date | date: '%Y' -}}
+        </p>
+        <p class="mt-1">
+          {{- post.tagline -}}
+        </p>
+      </a>
+    </article>
+    {%- endfor -%}
+  </div>
+</main>

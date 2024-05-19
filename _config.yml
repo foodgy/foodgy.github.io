@@ -1,0 +1,33 @@
+# Jekyll - Overreacted Theme
+
+title: romakoch
+author:
+  name: Роман Кох
+  logo: "/assets/img/logo.jpeg"
+  email: mail@romakoch.com
+
+description: >
+  Изливаю свет собственного величия на рабочее трудонаселение.
+
+google_tag_manager: GTM-MF37N24
+
+social_links:
+  - { platform: linkedin, title: "", user_url: "https://www.linkedin.com/in/fatnotbad/" }
+
+permalink: "/blog/:title/"
+
+feed:
+  excerpt_only: true
+
+sass:
+  style: :compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jemoji
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME

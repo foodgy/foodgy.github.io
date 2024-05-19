@@ -1,0 +1,23 @@
+{%- if page.layout == 'home' -%}
+<header>
+    <div class="mb-14">
+        <h1 class="font-sans font-black text-2xl dark:text-white/90">
+            {{- site.title -}}
+        </h1>
+    </div>
+</header>
+<aside>
+    <div class="flex mb-12">
+      <img class="w-14 h-14 rounded-full mr-3.5" src="{{ site.author.logo }}" alt="{{ site.author.name }}">
+      <p class="max-w-80 leading-7">Я — <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ '/' | relative_url }}about/">{{ site.author.name }}</a>, а это мой блог. Пишу&nbsp;словами про e-commerce.</p>
+    </div>
+  </aside>
+{%- else -%}
+<header class="mb-14">
+    <a class="inline-block text-2xl font-sans font-black transition ease-in-out hover:scale-[1.02] focus:scale-100 duration-200" href="{{ '/' | relative_url }}">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800 dark:from-pink-300 dark:to-violet-300">
+            {{- site.title -}}
+        </span>
+    </a>
+</header>
+{%- endif -%}
