@@ -1,8 +1,8 @@
 <figure class="pb-8">
     {%- if include.link -%}
-    <a href="/assets/img/{{ page.path | remove: '_posts' | remove: '.md' }}/{{ include.link | default:include.file }}" rel="nofollow noopener" target="_blank">
+    <a href="/assets/img/{{ page.path | remove: '_posts/' | remove: '.md' }}/{{ include.link | default:include.file }}" target="_blank">
     {%- endif -%}
-        <img src="/assets/img/{{ page.path | remove: '_posts' | remove: '.md' }}/{{ include.file }}" alt="{{ include.alt | default:include.caption }}" />
+        <img src="/assets/img/{{ page.path | remove: '_posts/' | remove: '.md' }}/{{ include.file }}" alt="{{ include.alt | default:include.caption }}" />
     {%- if include.link -%}
     </a>
     {%- endif -%}
