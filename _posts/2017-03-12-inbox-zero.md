@@ -10,9 +10,7 @@ tagline: "Возьми под контроль свой почтовый ящи�
 
 В&nbsp;работе с&nbsp;почтой я&nbsp;использую проверенную временем методику **Inbox Zero**, о&nbsp;которой и&nbsp;расскажу в&nbsp;этой статье.
 
-![Пытается навести порядок в почте](/assets/img{{ page.path | remove: '_posts/' | remove: '.md' }}/overworked.png)
-
-----
+![Пытается навести порядок в почте](/assets/img/{{ page.path | remove: '_posts/' | remove: '.md' }}/overworked.png)
 
 _[Исследования подтвердили](https://www.forbes.com/sites/annabelacton/2017/07/13/innovators-challenge-how-to-stop-wasting-time-on-emails/?sh=1f8a08c29788#:~:text=On%20average%2C%20office%20workers%20receive%20at%20least%20200%20messages%20a%20day%20and%20spend%20about%20two%2Dand%2Da%2Dhalf%20hours%20reading%20and%20replying%20to%20emails.){:target="_blank"}, что в&nbsp;среднем менеджеры тратят 2,5 часа в&nbsp;день на&nbsp;чтение и&nbsp;ответы писем, из&nbsp;которых около&nbsp;72% не&nbsp;имеют прямое отношения к&nbsp;их&nbsp;работе (в&nbsp;основном&nbsp;CC и&nbsp;BCC)._
 
