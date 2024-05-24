@@ -18,4 +18,4 @@ permalink: /about/
 * Поднимать e-com с колен — мой крест;
 * Только зелёные циферки в P&L;
 * Видел всю трудовую "дичь" (всю).
-* Контакты: [linkedin](https://www.linkedin.com/in/fatnotbad/){:target="_blank"}, [telegram](http://t.me/FatNotBad){:target="_blank"}, [e-mail](mailto:mail@romakoch.com){:target="_blank"}.
+* Контакты: [linkedin](https://www.linkedin.com/in/fatnotbad/){:target="_blank"}{:rel="me nofollow noopener"}, [telegram](http://t.me/FatNotBad){:target="_blank"}{:rel="me nofollow noopener"}, [e-mail](mailto:mail@romakoch.com){:target="_blank"}{:rel="nofollow noopener"}.

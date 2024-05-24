@@ -79,6 +79,12 @@
     opacity: 0.6;
   }
 
+  @media (prefers-color-scheme: dark) {
+    hr {
+      opacity: 0.1;
+    }    
+  }
+
   ul,
   ol {
     margin-top: 0;
@@ -104,23 +110,6 @@
     ol {
       margin-top: 0.875rem;
       margin-left: 1.75rem;
-    }
-  }
-
-  blockquote {
-    position: relative;
-    left: -0.5rem;
-    margin-left: -1rem;
-    margin-bottom: 2rem;
-    padding-left: 1rem;
-    font-style: italic;
-    border-left: 3px solid rgba(0, 0, 0, 0.9);
-    border-left-color: inherit;
-    opacity: 0.8;
-
-    p {
-      margin: 0;
-      padding: 0;
     }
   }
 
@@ -186,6 +175,15 @@
     );
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+  }
+
+  .quote {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    font-style: italic;
+    border-left: 3px solid rgba(0, 0, 0, 0.9);
+    border-left-color: inherit;
+    opacity: 0.8;
   }
 
   .callout {
