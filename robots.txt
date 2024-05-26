@@ -7,11 +7,11 @@ sitemap: false
 
 # Allow crawling of all content
 User-agent: *
-Disallow: /about/
+Disallow:
 
 # Yandex Only
 User-agent: Yandex
-Disallow: /about/
+Disallow:
 
 Sitemap: {{ site.url }}/sitemap.xml
 Host: {{ site.url | remove: 'https://' }}
