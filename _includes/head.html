@@ -22,7 +22,7 @@
         }
       }
     </script>
-    {%- if site.google_tag_manager -%}
+    {%- if jekyll.environment == 'production' and site.google_tag_manager -%}
       {%- include gtm.html -%}
     {%- endif -%}
   </head>
