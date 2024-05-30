@@ -7,6 +7,7 @@ permalink: /about/
 <head>
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
+    <link rel="canonical" href="{{ page.url | absolute_url}}" />
 </head>
 
 # Роман Кох
