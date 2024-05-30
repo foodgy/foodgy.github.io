@@ -13,23 +13,23 @@ layout: base
           {{- post.headline | default:post.title -}}
         </h2>
         <p class="text-[13px] text-gray-700 dark:text-gray-300">
-          {{- post.date | date: '%-d' }}
-          {% assign month = post.date | date: '%-m' %}
-          {% case month %}
-            {% when '1' %}января
-            {% when '2' %}февраля
-            {% when '3' %}марта
-            {% when '4' %}апреля
-            {% when '5' %}мая
-            {% when '6' %}июня
-            {% when '7' %}июля
-            {% when '8' %}августа
-            {% when '9' %}сентября
-            {% when '10' %}октября
-            {% when '11' %}ноября
-            {% when '12' %}декабря
-          {% endcase %}
-          {{ post.date | date: '%Y' -}}
+          {{- post.date | date: '%-d' | append: "&nbsp;" -}}
+          {%- assign month = post.date | date: '%-m' -%}
+          {%- case month -%}
+            {%- when '1' -%}января
+            {%- when '2' -%}февраля
+            {%- when '3' -%}марта
+            {%- when '4' -%}апреля
+            {%- when '5' -%}мая
+            {%- when '6' -%}июня
+            {%- when '7' -%}июля
+            {%- when '8' -%}августа
+            {%- when '9' -%}сентября
+            {%- when '10' -%}октября
+            {%- when '11' -%}ноября
+            {%- when '12' -%}декабря
+          {%- endcase -%}
+          {{- post.date | date: '%Y' | prepend: "&nbsp;" -}}
         </p>
         <p class="mt-1">
           {{- post.tagline -}}
