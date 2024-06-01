@@ -1,7 +1,7 @@
 ---
 layout: null
 title: Представляюсь
-description: Биомашина по решению бизненс-задач.
+description: Биомашина по решению бизнес-задач.
 permalink: /about/
 ---
 <head>
