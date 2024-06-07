@@ -8,6 +8,10 @@ permalink: /about/
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
     <link rel="canonical" href="{{ page.url | absolute_url}}" />
+    <link rel="icon" href="{{ '/favicon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
+    {%- if jekyll.environment == 'production' and site.google_tag_manager -%}
+        {%- include gtm.html -%}
+    {%- endif -%}
 </head>
 
 # Роман Кох
