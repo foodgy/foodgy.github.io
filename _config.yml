@@ -3,7 +3,7 @@
 title: romakoch
 author:
   name: Роман Кох
-  logo: "/assets/img/logo.jpeg"
+  logo: "/assets/img/logo.png"
   email: mail@romakoch.com
 
 description: >
@@ -12,7 +12,9 @@ description: >
 google_tag_manager: GTM-MF37N24
 
 social_links:
-  - { platform: linkedin, title: "", user_url: "https://www.linkedin.com/in/fatnotbad/" }
+  - { title: linkedin, visible: true, user_url: "https://www.linkedin.com/in/fatnotbad/" }
+  - { title: vc, visible: false, user_url: "https://vc.ru/u/245143-roman-koh" }
+  - { title: e-xecutive, visible: false, user_url: "https://www.e-xecutive.ru/users/1898956-roman-koh" }
 
 permalink: "/blog/:title/"
 
