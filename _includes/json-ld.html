@@ -21,7 +21,7 @@
     "datePublished": {{ page.date | jsonify }},
     {%- if page.last_modified_at %}
     "dateModified": {{ page.last_modified_at | jsonify }},
-    {% endif -%}
+    {%- endif %}
     "author": {
         "@type": "Person",
         "name": {{ site.author.name | jsonify }},
