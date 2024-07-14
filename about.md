@@ -23,7 +23,8 @@ last_modified_at: 2024-06-07 03:00:00 +0300
       {
         "@type": "ListItem",
         "position": 2,
-        "name": {{ page.title | jsonify }}
+        "name": {{ page.title | jsonify }},
+        "item": {{ page.url | absolute_url | jsonify }}
       }]
     },
     {
