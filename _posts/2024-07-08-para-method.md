@@ -14,7 +14,7 @@ tagline: "Простой способ организовать свою цифр
 
 ## Что такое метод PARA
 
-Методология **PARA** представляет собой систему организации ведения заметок по&nbsp;четырём категориям:
+Метод **PARA** представляет собой систему организации ведения заметок по&nbsp;четырём категориям:
 
 1. Projects (проекты);
 2. Areas (области);
@@ -95,7 +95,7 @@ _Система **PARA** была разработана Тьяго Форте&n
 
 ### Создайте основные категории
 
-Метод **PARA** проще всего использовать на&nbsp;базе какого-либо приложения для ведения электронных заметок. Наиболее популярными являются [Apple Notes](https://apps.apple.com/us/app/notes/id1110145109){:target="_blank"}, [Obsidian](https://obsidian.md){:target="_blank"}, [Notion](https://www.notion.so){:target="_blank"} и&nbsp;[Evernote](https://evernote.com){:target="_blank"}.
+Методологию **PARA** проще всего применять на&nbsp;базе какого-либо приложения для ведения электронных заметок. Наиболее популярными являются [Apple Notes](https://apps.apple.com/us/app/notes/id1110145109){:target="_blank"}, [Obsidian](https://obsidian.md){:target="_blank"}, [Notion](https://www.notion.so){:target="_blank"} и&nbsp;[Evernote](https://evernote.com){:target="_blank"}.
 
 После того, как вы&nbsp;определитесь где вести заметки, необходимо в&nbsp;выбранной программе создать четыре основные категории: _Projects_, _Areas_, _Resources_, _Archive_.
 
