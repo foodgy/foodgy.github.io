@@ -5,6 +5,10 @@ description: "Метод Inbox Zero поможет держать электро
 headline: "Inbox Zero&nbsp;&mdash; как навести в&nbsp;почте порядок"
 tagline: "Возьми под контроль свой почтовый ящик!"
 last_modified_at: 2024-05-24 03:00:00 +0300
+image:
+    - /assets/img/2017-03-12-inbox-zero/overworked.png
+    - /assets/img/2017-03-12-inbox-zero/inbox-zero.png
+    - /assets/img/2017-03-12-inbox-zero/recos.png
 ---
 
 Разбор электронной почты&nbsp;&mdash; неотъемлемая рутина офисного сотрудника. Количество входящих сообщений растет, а&nbsp;на&nbsp;поддержание порядка в&nbsp;почте уходит всё больше времени.
