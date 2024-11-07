@@ -51,6 +51,8 @@ last_modified_at: 2024-06-07 03:00:00 +0300
     {%- endif -%}
 </head>
 
+[<< Главная]({{ site.url | absolute_url }})
+
 # Роман Кох
 
 ## Карьера
