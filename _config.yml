@@ -13,6 +13,7 @@ google_tag_manager: GTM-MF37N24
 
 social_links:
   - { title: linkedin, visible: true, user_url: "https://www.linkedin.com/in/fatnotbad/" }
+  - { title: habr, visible: false, user_url: "https://habr.com/ru/users/FatNotBad/" }
   - { title: vc, visible: false, user_url: "https://vc.ru/u/245143-roman-koh" }
   - { title: e-xecutive, visible: false, user_url: "https://www.e-xecutive.ru/users/1898956-roman-koh" }
 
