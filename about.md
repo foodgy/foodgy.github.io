@@ -9,7 +9,8 @@ last_modified_at: 2025-01-05 03:00:00 +0300
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
     <link rel="canonical" href="{{ page.url | absolute_url}}" />
-    <link rel="icon" href="{{ '/favicon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/assets/img/icon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/png" sizes="329x329">
     <script type="application/ld+json">
     [{
       "@context": "https://schema.org",
