@@ -28,8 +28,6 @@
 }
 
 .markdown {
-  line-height: 28px;
-
   h2,
   h3 {
     margin-top: 0.5rem;
@@ -85,24 +83,26 @@
     }    
   }
 
-  ul,
-  ol {
-    margin-top: 0;
-    padding: 0;
+  >ul,
+  >ol {
     margin-bottom: 1.75rem;
     margin-left: 1.75rem;
     list-style-position: outside;
     list-style-image: none;
+
+    li {
+      margin-bottom: 0.875rem;
+    }
   }
 
-  ul {
+  >ul {
     list-style: disc;
   }
 
-  ol {
+  >ol {
     list-style: decimal;
   }
-
+/*
   li {
     margin-bottom: 0.875rem;
 
@@ -112,7 +112,7 @@
       margin-left: 1.75rem;
     }
   }
-
+*/
   table {
     margin-bottom: 2rem;
 
@@ -191,6 +191,12 @@
     border-radius: 0.75em;
     margin-bottom: 2rem;
     background-color: var(--inline-code-bg-color);
+
+    ol {
+      >li::marker {
+        content: counters(list-item, ".") ". ";
+      }
+    }
   }
 
   .emoji {
