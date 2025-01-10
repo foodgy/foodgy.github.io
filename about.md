@@ -75,12 +75,12 @@ last_modified_at: 2025-01-05 03:00:00 +0300
 
 ## Контакты
 
-* [linkedin](https://www.linkedin.com/in/fatnotbad/){:target="_blank"}{:rel="me noreferrer"};
-* [telegram](https://t.me/FatNotBad){:target="_blank"}{:rel="me noreferrer"};
+* [linkedin](https://www.linkedin.com/in/fatnotbad/){:target="_blank" rel="me noreferrer"};
+* [telegram](https://t.me/FatNotBad){:target="_blank" rel="me noreferrer"};
 * [e-mail](mailto:mail@romakoch.com){:target="_blank"}.
 
 ## Публикации
 
-* [habr.ru](https://habr.com/ru/users/FatNotBad/publications/articles/){:target="_blank"}{:rel="noreferrer"};
-* [vc.ru](https://vc.ru/u/245143-roman-ko){:target="_blank"}{:rel="noreferrer"};
-* [e-xecutive.ru](https://www.e-xecutive.ru/users/1898956-roman-koh/articles){:target="_blank"}{:rel="noreferrer"}.
+* [habr.ru](https://habr.com/ru/users/FatNotBad/publications/articles/){:target="_blank" rel="noreferrer"};
+* [vc.ru](https://vc.ru/u/245143-roman-ko){:target="_blank" rel="noreferrer"};
+* [e-xecutive.ru](https://www.e-xecutive.ru/users/1898956-roman-koh/articles){:target="_blank" rel="noreferrer"}.
