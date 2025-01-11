@@ -1,10 +1,11 @@
+{%- assign img_path = "/assets/img/" | append: page.path | remove: '_posts/' | remove: '.md' | append: '/' -%}
 <figure class="pb-8">
     {%- if include.link -%}
-    <a href="/assets/img/{{ page.path | remove: '_posts/' | remove: '.md' }}/{{ include.link | default:include.file }}" target="_blank">
+        <a href="{{ img_path | append: include.link | default: include.file }}" target="_blank">
     {%- endif -%}
-        <img src="/assets/img/{{ page.path | remove: '_posts/' | remove: '.md' }}/{{ include.file }}" alt="{{ include.alt | default:include.caption }}" loading="lazy"/>
+        <img src="{{ img_path | append: include.file }}" alt="{{ include.alt | default: include.caption }}" loading="lazy"/>
     {%- if include.link -%}
-    </a>
+        </a>
     {%- endif -%}
     {%- if include.caption -%}
     <figcaption class="italic text-sm mt-3">

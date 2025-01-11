@@ -15,18 +15,18 @@
     <nav>
         <ul class="flex flex-wrap place-content-between mt-20">
             <li class="mb-3.5 mr-5">
-            {%- if page.previous.url -%}
-                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ page.previous.url }}" rel="prev">
-                    &#8592; {{ page.previous.headline }}
+                {%- assign prev_url = page.previous.url | default: site.posts.first.url -%}
+                {%- assign prev_headline = page.previous.headline | default: site.posts.first.headline -%}
+                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ prev_url }}">
+                    &#8592; {{ prev_headline }}
                 </a>
-            {%- endif -%}
             </li>
             <li class="mb-3.5">
-            {%- if page.next.url -%}
-                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ page.next.url }}" rel="next">
-                    {{ page.next.headline }} &#8594;
+                {%- assign next_url = page.next.url | default: site.posts.last.url -%}
+                {%- assign next_headline = page.next.headline | default: site.posts.last.headline -%}
+                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ next_url }}">
+                    {{ next_headline }} &#8594;
                 </a>
-            {%- endif -%}
             </li>
         </ul>
     </nav>

@@ -14,8 +14,8 @@ layout: base
         </h2>
         <p class="text-[13px] text-gray-700 dark:text-gray-300">
           {{- post.date | date: '%-d' | append: "&nbsp;" -}}
-          {%- assign month = post.date | date: '%-m' -%}
-          {%- case month -%}
+          {%- assign month_number = post.date | date: '%-m' -%}
+          {%- case month_number -%}
             {%- when '1' -%}января
             {%- when '2' -%}февраля
             {%- when '3' -%}марта
