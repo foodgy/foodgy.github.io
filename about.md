@@ -1,55 +1,55 @@
 ---
-layout: null
+layout: default
 title: Представляюсь — Роман Кох
 description: Биомашина по решению бизнес-задач.
 permalink: /about/
 last_modified_at: 2025-01-05 03:00:00 +0300
 ---
 <head>
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
-    <link rel="canonical" href="{{ page.url | absolute_url}}" />
-    <link rel="icon" href="{{ '/assets/img/icon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
-    <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/png" sizes="329x329">
-    <script type="application/ld+json">
-    [{
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Главная",
-        "item": {{ site.url | absolute_url | jsonify }}
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": {{ page.title | jsonify }},
-        "item": {{ page.url | absolute_url | jsonify }}
-      }]
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url}}">
+  <link rel="icon" href="{{ '/assets/img/icon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/png" sizes="329x329">
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": {{ site.url | absolute_url | jsonify }}
     },
     {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "datePublished": "2024-05-19 03:00:00 +0300",
-      "dateModified": {{ page.last_modified_at | jsonify }},
-      "mainEntity": {
-        "@type": "Person",
-        "name": {{ site.author.name | jsonify }},
-        "description": "Head of E-commerce",
-        "image": {{ site.author.logo | absolute_url | jsonify }},
-        "sameAs": [
-          {% for entry in site.social_links -%}
-            {{ entry.user_url | jsonify }}
-          {%- unless forloop.last %},{%- endunless %}
-          {% endfor -%}
-        ]
-      }
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
     }]
-    </script>
-    {%- if jekyll.environment == 'production' and site.google_tag_manager -%}
-        {%- include gtm.html -%}
-    {%- endif -%}
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "datePublished": "2024-05-19 03:00:00 +0300",
+    "dateModified": {{ page.last_modified_at | jsonify }},
+    "mainEntity": {
+      "@type": "Person",
+      "name": {{ site.author.name | jsonify }},
+      "description": "Head of E-commerce",
+      "image": {{ site.author.logo | absolute_url | jsonify }},
+      "sameAs": [
+        {% for entry in site.social_links -%}
+          {{ entry.user_url | jsonify }}
+        {%- unless forloop.last %},{%- endunless %}
+        {% endfor -%}
+      ]
+    }
+  }]
+  </script>
+  {%- if jekyll.environment == 'production' and site.google_tag_manager -%}
+      {%- include gtm.html -%}
+  {%- endif -%}
 </head>
 
 [<< Главная]({{ site.url | absolute_url }})
