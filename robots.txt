@@ -1,8 +1,3 @@
----
-layout: null
-sitemap: false
----
-
 # www.robotstxt.org/
 
 # Allow crawling of all content
@@ -13,5 +8,5 @@ Disallow:
 User-agent: Yandex
 Disallow:
 
-Sitemap: {{ site.url }}/sitemap.xml
-Host: {{ site.url | remove: 'https://' }}
+Sitemap: /sitemap.xml
+Host: 
