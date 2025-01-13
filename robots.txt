@@ -8,5 +8,5 @@ Disallow:
 User-agent: Yandex
 Disallow:
 
-Sitemap: /sitemap.xml
-Host: 
+Sitemap: https://romakoch.com/sitemap.xml
+Host: romakoch.com
