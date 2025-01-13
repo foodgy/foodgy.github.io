@@ -16,19 +16,6 @@
     <link rel="icon" href="{{ '/assets/img/icon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
     <link rel="icon" href="{{ '/assets/img/icon.png' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/png" sizes="329x329">
     {% feed_meta %}
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              'sans-serif': ['Montserrat', 'sans-serif'],
-              'serif': ['Merriweather', 'serif'],
-            }
-          }
-        }
-      }
-    </script>
     {%- if page.layout == 'post' -%}
       {%- include json-ld.html -%}
     {%- endif -%}    

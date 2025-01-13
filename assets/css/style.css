@@ -1,0 +1,253 @@
+---
+---
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+:root {
+    --bg-color: #fff;
+    --primary-color: #ec4899;
+    --shadow-color: rgba(210, 214, 220, 0.5);
+    --code-bg-color: #232936;
+    --code-color: #e6e6e6;
+    --inline-code-bg-color: rgba(255, 229, 100, 0.2);
+    --inline-code-color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #282c35;
+        --primary-color: #f9a8d4;
+        --shadow-color: rgba(26, 26, 27, 0.637);
+        --code-bg-color: #191d27;
+        --inline-code-bg-color: rgba(115, 124, 153, 0.2);
+        --inline-code-color: #e6e6e6;
+    }
+}
+
+.markdown {
+
+    h2,
+    h3,
+    h4 {
+        @apply mt-2;
+        @apply mb-8;
+        @apply font-bold;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    >p {
+        @apply mb-8;
+    }
+
+    a {
+        @apply border-b;
+        @apply border-[--primary-color];
+        @apply text-[--primary-color];
+
+        &:hover {
+            border: 0;
+        }
+    }
+
+    img {
+        box-shadow: 0 2px 15px 0 var(--shadow-color);
+        @apply rounded-md;
+    }
+
+    hr {
+        @apply pt-8;
+        @apply opacity-60;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        hr {
+            @apply opacity-10;
+        }
+    }
+
+    > ul,
+    > ol {
+        @apply mb-7;
+        @apply ml-7;
+        @apply list-outside;
+        @apply list-image-none;
+
+        li {
+            @apply mb-3.5;
+        }
+    }
+
+    > ul {
+        @apply list-disc;
+    }
+
+    > ol {
+        @apply list-decimal;
+    }
+
+    table {
+        @apply mb-8;
+
+        td,
+        th {
+            @apply border;
+            @apply py-1;
+            @apply px-2;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            td,
+            th {
+                @apply border-[#e5e7eb]/30;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        table {
+            @apply block;
+            @apply w-full;
+            @apply overflow-x-auto;
+        }
+    }
+
+    :not(pre) > code {
+        @apply rounded-[10px];
+        @apply bg-[--inline-code-bg-color];
+        @apply text-[--inlinecode-color];
+        @apply pt-[0.15rem];
+        @apply px-[0.2rem];
+        @apply pb-[0.05rem];
+        @apply whitespace-normal;
+    }
+
+    pre {
+        @apply text-[--code-color];
+        @apply bg-[--code-bg-color];
+        @apply -ml-4;
+        @apply -mr-4;
+        @apply mb-8;
+        @apply overflow-y-auto;
+        @apply text-sm;
+        @apply rounded-xl;
+        @apply p-4;
+    }
+
+    .quote {
+        @apply mb-8;
+        @apply pl-4;
+        @apply italic;
+        @apply border-l-[3px];
+        @apply border-solid;
+        @apply border-l-inherit;
+        @apply opacity-80;
+    }
+
+    .callout {
+        @apply p-3;
+        @apply rounded-xl;
+        @apply mb-8;
+        @apply bg-[--inline-code-bg-color];
+
+        ol {
+            > li::marker {
+                content: counters(list-item, ".") ". ";
+            }
+        }
+    }
+
+    .emoji {
+        @apply inline;
+        @apply align-middle;
+        @apply mb-[0.3rem];
+    }
+}
+
+/* Cyrillic */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/merriweather-italic-cyrillic-400.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/merriweather-normal-cyrillic-400.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/assets/fonts/merriweather-normal-cyrillic-700.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/assets/fonts/montserrat-normal-cyrillic-900.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Latin */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/merriweather-italic-latin-400.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/merriweather-normal-latin-400.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/assets/fonts/merriweather-normal-latin-700.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/assets/fonts/montserrat-normal-latin-900.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
