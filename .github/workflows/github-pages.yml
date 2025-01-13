@@ -22,7 +22,7 @@ jobs:
         with:
           enable_cache: true
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
