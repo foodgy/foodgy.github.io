@@ -3,7 +3,7 @@ layout: default
 title: Представляюсь — Роман Кох
 description: Биомашина по решению бизнес-задач.
 permalink: /about/
-last_modified_at: 2025-01-05 03:00:00 +0300
+last_modified_at: "2025-01-05"
 ---
 <head>
   <title>{{ page.title }}</title>
@@ -31,13 +31,14 @@ last_modified_at: 2025-01-05 03:00:00 +0300
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "datePublished": "2024-05-19 03:00:00 +0300",
-    "dateModified": {{ page.last_modified_at | jsonify }},
+    "datePublished": "2024-05-19T03:00:00+03:00",
+    "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
     "mainEntity": {
       "@type": "Person",
       "name": {{ site.author.name | jsonify }},
-      "description": "Head of E-commerce",
-      "image": {{ site.author.logo | absolute_url | jsonify }},
+      "description": {{ site.author.description | jsonify }},
+      "image": {{ site.author.avatar | absolute_url | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
       "sameAs": [
         {% for entry in site.social_links -%}
           {{ entry.user_url | jsonify }}

@@ -1,13 +1,15 @@
 url: 'https://romakoch.com'
 
 title: romakoch
-author:
-  name: Роман Кох
-  logo: "/assets/img/logo.webp"
-  email: mail@romakoch.com
-
 description: >
   Изливаю свет собственного величия на рабочее трудонаселение.
+
+author:
+  name: Роман Кох
+  avatar: "/assets/img/logo.webp"
+  email: mail@romakoch.com
+  description: > 
+    Роман Кох — эксперт в области электронной коммерции с более чем 15-летним опытом, пишет о менеджменте, e-commerce и методах продуктивности.
 
 google_tag_manager: GTM-MF37N24
 
@@ -21,9 +23,6 @@ permalink: "/blog/:title/"
 
 feed:
   excerpt_only: true
-
-sass:
-  style: :compressed
 
 plugins:
   - jekyll-postcss-v2
