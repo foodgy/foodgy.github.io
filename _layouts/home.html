@@ -8,7 +8,7 @@ layout: base
     {%- for post in site.posts -%}
     {%- assign color = gradient[forloop.index0] -%}
     <article>
-      <a class="block py-4 transition ease-in-out hover:scale-[1.005] focus:scale-100 duration-200" href="{{ post.url | absolute_url }}">
+      <a class="block py-4 transition ease-in-out hover:scale-[1.005] focus:scale-100 duration-200 motion-reduce:transition-none motion-reduce:hover:transform-none" href="{{ post.url | absolute_url }}">
         <h2 class="font-sans-serif {{ color | default: 'text-violet-900/80 dark:text-violet-300' }} font-black text-[28px]">
           {{- post.headline | default:post.title -}}
         </h2>
