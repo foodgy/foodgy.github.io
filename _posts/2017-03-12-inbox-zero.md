@@ -13,7 +13,7 @@ last_modified_at: "2025-01-09"
 
 <nav aria-label="Table of Contents">
     <details class="font-sans callout">
-        <summary>Содержание</summary>
+        <summary class="select-none">Содержание</summary>
         <ol class="list-decimal leading-8 pl-8 my-4">
             <li><a href="#что-такое-inbox-zero">Что такое Inbox Zero?</a></li>
             <li><a href="#история-создания-и-концепция">История создания и концепция</a></li>
