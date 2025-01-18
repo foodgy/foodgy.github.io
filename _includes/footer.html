@@ -1,19 +1,20 @@
 <footer>
-    <hr class="pt-8 opacity-60 dark:opacity-10">
+    <hr class="pt-8 dark:opacity-20">
     {%- include social.html -%}
-    <div class="mt-14">
+    {%- include subscription.html -%}
+    <div class="my-20">
         <a class="inline-block text-2xl font-sans-serif font-black transition ease-in-out hover:scale-[1.02] focus:scale-100 duration-200" href="{{ '/' | relative_url }}">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800 dark:from-pink-300 dark:to-violet-300">
                 {{- site.title -}}
             </span>
         </a>
-        <div class="flex mt-5">
+        <div class="flex mt-7">
             <img class="w-14 h-14 rounded-full mr-3.5" src="{{ site.author.avatar }}" alt="{{ site.author.name }}" loading="lazy">
             <p class="max-w-80 leading-7">Я&nbsp;&mdash; <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ '/about/' | relative_url }}" target="_blank">{{ site.author.name }}</a>, а&nbsp;это мой блог. Пишу&nbsp;словами про e-commerce.</p>
         </div>
     </div>
     <nav>
-        <ul class="flex flex-wrap place-content-between mt-20">
+        <ul class="flex flex-wrap place-content-between">
             <li class="mb-3.5 mr-5">
                 {%- assign prev_url = page.previous.url | default: site.posts.first.url -%}
                 {%- assign prev_headline = page.previous.headline | default: site.posts.first.headline -%}
