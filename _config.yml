@@ -6,7 +6,7 @@ description: >
 
 author:
   name: Роман Кох
-  avatar: "/assets/img/logo.webp"
+  avatar: "/assets/img/author.png"
   email: mail@romakoch.com
   description: > 
     Роман Кох — эксперт в области электронной коммерции с более чем 15-летним опытом, пишет о менеджменте, e-commerce и методах продуктивности.
@@ -30,7 +30,6 @@ plugins:
   - jekyll-postcss-v2
   - jekyll-feed
   - jekyll-sitemap
-  - jemoji
 
 exclude:
   - Gemfile
