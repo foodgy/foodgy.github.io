@@ -1,15 +1,28 @@
-{%- assign img_path = "/assets/img/" | append: page.path | remove: '_posts/' | remove: '.md' | append: '/' -%}
-<figure class="pb-8">
-    {%- if include.link -%}
-        <a href="{{ img_path | append: include.link | default: include.file }}" target="_blank">
-    {%- endif -%}
-        <img src="{{ img_path | append: include.file }}" alt="{{ include.alt | default: include.caption }}" loading="lazy"/>
-    {%- if include.link -%}
-        </a>
-    {%- endif -%}
-    {%- if include.caption -%}
+{%- assign img_path = "/assets/img/" | append: page.name | remove: '.md' -%}
+{%- assign img_name = include.img | split: '.' | first -%}
+
+{%- capture img_tag -%}
+    <picture>
+        <source type="image/webp" srcset="{{ img_path }}/{{ img_name }}.webp">
+        <img src="{{ img_path }}/{{ include.img }}" alt="{{ include.alt | default: include.caption }}" {% if include.loading %}loading="{{ include.loading }}"{% endif %}>
+    </picture>
+{%- endcapture -%}
+
+{%- if include.caption -%}
+<figure class="mb-8">
+    <a href="{{ img_path }}/{{ include.link | default: include.img }}" target="_blank">
+        {{ img_tag }}
+    </a>
     <figcaption class="italic text-sm mt-3">
         {{ include.caption }}
     </figcaption>
-    {%- endif -%}
 </figure>
+{%- else -%}
+    {%- if include.link -%}
+    <a href="{{ img_path }}/{{ include.link | default: include.img }}" target="_blank">
+        {{ img_tag }}
+    </a>
+    {%- else -%}
+        <p>{{ img_tag }}</p>
+    {%- endif -%}
+{%- endif -%}
