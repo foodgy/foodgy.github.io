@@ -4,8 +4,9 @@
     {%- assign image_path = site.assets.images | append: site.author.image -%}
     {%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
 {%- else -%}
-    {%- assign image_path = site.assets.images | append: page.name | remove: '.md' | append: '/' | append: include.img -%}
-    {% assign image_webp = image_path | split: '.' | first | append: '.webp' %}
+    {%- assign image_folder = site.assets.images | append: page.name | remove: '.md' | append: '/' -%}
+    {%- assign image_path = image_folder | append: include.img -%}
+    {%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
 {%- endif -%}
 
 {% assign webp_exists = site.static_files | where: "path", image_webp | first %}
@@ -23,7 +24,7 @@
 
 {%- if include.caption -%}
 <figure class="mb-8">
-    <a href="{{ include.link | default: image_path }}" target="_blank">
+    <a href="{{ image_folder }}{{ include.link | default: include.img }}" target="_blank">
         {{ image_tag }}
     </a>
     <figcaption class="italic text-sm mt-3">
@@ -32,7 +33,7 @@
 </figure>
 {%- else -%}
     {%- if include.link -%}
-    <a href="{{ include.link | default: image_path }}" target="_blank">
+    <a href="{{ image_folder }}{{ include.link | default: include.img }}" target="_blank">
         {{ image_tag }}
     </a>
     {%- else -%}
