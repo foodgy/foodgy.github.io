@@ -27,7 +27,7 @@ assets:
   css: "/assets/css/"
   fonts: "/assets/fonts/"
   images: "/assets/img/"
-  pdf: "/assets/docs/"
+  pdf: "/assets/pdf/"
 
 feed:
   excerpt_only: true
@@ -37,7 +37,7 @@ webp:
   quality: 80
   img_dir: ["/assets/img/"]
   nested: true
-  regenerate: true
+  regenerate: false
 
 plugins:
   - jekyll-postcss-v2
