@@ -1,23 +1,15 @@
-{%- assign is_avatar = include.avatar | default: false -%}
+{%- assign image_folder = '/assets/img/' | append: page.name | remove: '.md' | append: '/' -%}
+{%- assign image_path = image_folder | append: include.img -%}
+{%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
 
-{%- if is_avatar -%}
-    {%- assign image_path = site.assets.images | append: site.author.image -%}
-    {%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
-{%- else -%}
-    {%- assign image_folder = site.assets.images | append: page.name | remove: '.md' | append: '/' -%}
-    {%- assign image_path = image_folder | append: include.img -%}
-    {%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
-{%- endif -%}
-
-{% assign webp_exists = site.static_files | where: "path", image_webp | first %}
+{%- assign webp_exists = site.static_files | where: "path", image_webp | first -%}
 
 {%- capture image_tag -%}
     <picture>
         {%- if webp_exists -%}
         <source type="image/webp" srcset="{{ image_webp }}">
         {%- endif -%}
-        <img {% if is_avatar %} class="w-14 h-14 rounded-full mr-3.5" {% endif %}
-            src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}"
+        <img src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}"
             {% if include.loading %} loading="{{ include.loading }}" {% endif %}>
     </picture>
 {%- endcapture -%}

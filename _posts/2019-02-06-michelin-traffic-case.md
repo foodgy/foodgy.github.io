@@ -85,7 +85,7 @@ tagline: "Кейс продвижения интернет-магазина ко
 
 {% include image.html img="structure@2x.jpg" link="" caption="Старая структура vs новая" loading="lazy" %}
 
-В&nbsp;августе 2018 проект прирос внушительным количеством новых посадочных. Это незамедлительно отразилось ростом показов в&nbsp;поиске, особенно на&nbsp;[мобильных устройствах]({{ site.assets.images | append: page.name | remove: '.md' }}/seo-devices-growth-full.jpg){:target="_blank"}:
+В&nbsp;августе 2018 проект прирос внушительным количеством новых посадочных. Это незамедлительно отразилось ростом показов в&nbsp;поиске, особенно на&nbsp;[мобильных устройствах]({{ '/assets/img/' | append: page.name | remove: '.md' }}/seo-devices-growth-full.jpg){:target="_blank"}:
 
 {% include image.html img="seo-growth@2x.jpg" link="seo-growth-full.jpg" caption="Динамика показов в поиске (все устройства)" loading="lazy" %}
 

@@ -38,11 +38,11 @@ last_modified_at: "2025-01-05"
           "mainEntity": {
             "@type": "Person",
             "name": {{ site.author.name | jsonify }},
-            "description": {{ site.author.description | strip_newlines | jsonify }},
+            "description": {{ site.author.description | jsonify }},
             "url": {{ '/about/' | absolute_url | jsonify }},
             "image": {
               "@type": "ImageObject",
-              "url": {{ site.assets.images | append: site.author.image | absolute_url | jsonify }},
+              "url": {{ site.author.image | absolute_url | jsonify }},
               "width": 400,
               "height": 400
             },

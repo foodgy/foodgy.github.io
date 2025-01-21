@@ -1,17 +1,17 @@
 url: "https://romakoch.com"
 
 title: romakoch
-description: >
+description: >-
   Изливаю свет собственного величия на рабочее трудонаселение.
 
 author:
   name: Роман Кох
-  image: author.png
+  image: "/assets/img/author.png"
   email: mail@romakoch.com
-  description: > 
+  description: >- 
     Роман Кох — эксперт в области электронной коммерции с более чем 15-летним опытом, пишет о менеджменте, e-commerce и методах продуктивности.
     
-privacy_policy: privacy_policy.pdf
+privacy_policy: "/assets/pdf/privacy_policy.pdf"
 
 google_tag_manager: GTM-MF37N24
 
@@ -22,12 +22,6 @@ social_links:
   - { title: e-xecutive, visible: false, user_url: "https://www.e-xecutive.ru/users/1898956-roman-koh" }
 
 permalink: "/blog/:title/"
-
-assets:
-  css: "/assets/css/"
-  fonts: "/assets/fonts/"
-  images: "/assets/img/"
-  pdf: "/assets/pdf/"
 
 feed:
   excerpt_only: true
