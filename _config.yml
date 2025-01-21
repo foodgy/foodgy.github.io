@@ -1,4 +1,4 @@
-url: 'https://romakoch.com'
+url: "https://romakoch.com"
 
 title: romakoch
 description: >
@@ -6,12 +6,12 @@ description: >
 
 author:
   name: Роман Кох
-  avatar: "/assets/img/author.png"
+  image: author.png
   email: mail@romakoch.com
   description: > 
     Роман Кох — эксперт в области электронной коммерции с более чем 15-летним опытом, пишет о менеджменте, e-commerce и методах продуктивности.
-
-privacy_policy: "/assets/docs/privacy_policy.pdf"
+    
+privacy_policy: privacy_policy.pdf
 
 google_tag_manager: GTM-MF37N24
 
@@ -23,11 +23,25 @@ social_links:
 
 permalink: "/blog/:title/"
 
+assets:
+  css: "/assets/css/"
+  fonts: "/assets/fonts/"
+  images: "/assets/img/"
+  pdf: "/assets/docs/"
+
 feed:
   excerpt_only: true
 
+webp:
+  enabled: true
+  quality: 80
+  img_dir: ["/assets/img/"]
+  nested: true
+  regenerate: true
+
 plugins:
   - jekyll-postcss-v2
+  - jekyll-webp
   - jekyll-feed
   - jekyll-sitemap
 

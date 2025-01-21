@@ -10,7 +10,7 @@
         </div>
         <div class="flex md:items-center items-start">
             <input id="checkbox" class="size-4 border border-gray-300 dark:border-transparent rounded bg-white dark:bg-gray-500/60 accent-pink-500/90 appearance-none checked:appearance-auto" type="checkbox" required>
-            <label class="ml-2 text-xs text-gray-500/70 dark:text-gray-400 select-none" for="checkbox">Даю согласие на обработку <a class="border-b border-gray-500/70 dark:border-gray-400 hover:border-0" href="{{ site.privacy_policy }}" target="_blank" rel="nofollow">персональных данных</a></label>
+            <label class="ml-2 text-xs text-gray-500/70 dark:text-gray-400 select-none" for="checkbox">Даю согласие на обработку <a class="border-b border-gray-500/70 dark:border-gray-400 hover:border-0" href="{{ site.assets.pdf | append: site.privacy_policy }}" target="_blank" rel="nofollow">персональных данных</a></label>
         </div>
     </form>
     <script>

@@ -1,17 +1,30 @@
-{%- assign img_path = "/assets/img/" | append: page.name | remove: '.md' -%}
-{%- assign img_name = include.img | split: '.' | first -%}
+{%- assign is_avatar = include.avatar | default: false -%}
 
-{%- capture img_tag -%}
+{%- if is_avatar -%}
+    {%- assign image_path = site.assets.images | append: site.author.image -%}
+    {%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
+{%- else -%}
+    {%- assign image_path = site.assets.images | append: page.name | remove: '.md' | append: '/' | append: include.img -%}
+    {% assign image_webp = image_path | split: '.' | first | append: '.webp' %}
+{%- endif -%}
+
+{% assign webp_exists = site.static_files | where: "path", image_webp | first %}
+
+{%- capture image_tag -%}
     <picture>
-        <source type="image/webp" srcset="{{ img_path }}/{{ img_name }}.webp">
-        <img src="{{ img_path }}/{{ include.img }}" alt="{{ include.alt | default: include.caption }}" {% if include.loading %}loading="{{ include.loading }}"{% endif %}>
+        {%- if webp_exists -%}
+        <source type="image/webp" srcset="{{ image_webp }}">
+        {%- endif -%}
+        <img {% if is_avatar %} class="w-14 h-14 rounded-full mr-3.5" {% endif %}
+            src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}"
+            {% if include.loading %} loading="{{ include.loading }}" {% endif %}>
     </picture>
 {%- endcapture -%}
 
 {%- if include.caption -%}
 <figure class="mb-8">
-    <a href="{{ img_path }}/{{ include.link | default: include.img }}" target="_blank">
-        {{ img_tag }}
+    <a href="{{ include.link | default: image_path }}" target="_blank">
+        {{ image_tag }}
     </a>
     <figcaption class="italic text-sm mt-3">
         {{ include.caption }}
@@ -19,10 +32,10 @@
 </figure>
 {%- else -%}
     {%- if include.link -%}
-    <a href="{{ img_path }}/{{ include.link | default: include.img }}" target="_blank">
-        {{ img_tag }}
+    <a href="{{ include.link | default: image_path }}" target="_blank">
+        {{ image_tag }}
     </a>
     {%- else -%}
-        <p>{{ img_tag }}</p>
+    <p>{{ image_tag }}</p>
     {%- endif -%}
 {%- endif -%}
