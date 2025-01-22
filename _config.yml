@@ -30,6 +30,7 @@ webp:
   enabled: true
   quality: 80
   img_dir: ["/assets/img/"]
+  formats: [".jpg", ".png"]
   nested: true
   regenerate: false
 
