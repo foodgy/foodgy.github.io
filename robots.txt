@@ -1,0 +1,12 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /*.pdf$
+
+# Yandex Only
+User-agent: Yandex
+Disallow: /*.pdf$
+
+Sitemap: https://romakoch.com/sitemap.xml
+Host: romakoch.com
