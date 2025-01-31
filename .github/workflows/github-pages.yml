@@ -30,6 +30,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install WebP package
+        run: sudo apt-get update && sudo apt-get install -y webp
+
+      - name: Convert images to WebP
+        run: npm run create-webp
+
       - name: Build Jekyll
         uses: limjh16/jekyll-action-ts@v2
         with:

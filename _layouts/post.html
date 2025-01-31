@@ -4,10 +4,10 @@ layout: base
 {%- include header.html -%}
 <main>
   <article>
-    <h1 class="font-sans-serif font-black text-4.5xl leading-11 dark:text-white">
+    <h1 class="font-sans-serif font-black text-4.5xl leading-11 dark:text-white mb-2">
       {{- page.headline | default: page.title -}}
     </h1>
-    <small class="mt-2 text-gray-700 dark:text-gray-300">
+    <small class="text-gray-700 dark:text-gray-300">
       {%- assign page_date = page.last_modified_at | default: page.date -%}
       {%- if page.last_modified_at -%}
         <span>Обновлено </span>

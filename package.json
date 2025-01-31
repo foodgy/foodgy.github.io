@@ -5,5 +5,8 @@
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "create-webp": "find assets/img -type f \\( -iname '*.jpg' -o -iname '*.png' \\) ! -iname '*-full*' ! -iname '*favicon*' -exec sh -c 'output=\"${1%.*}.webp\"; [ ! -f \"$output\" ] && cwebp -q 80 \"$1\" -o \"$output\"' _ {} \\;"
   }
 }

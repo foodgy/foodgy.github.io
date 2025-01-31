@@ -1,22 +1,29 @@
-{%- assign image_folder = '/assets/img/' | append: page.name | remove: '.md' | append: '/' -%}
-{%- assign image_path = image_folder | append: include.src -%}
-{%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
+{%- assign is_post_image = include.is_post_image | default: true -%}
 
+{%- capture image_path -%}
+    {%- if is_post_image == "false" -%}
+        {{ include.src }}
+    {%- else -%}
+        /assets/img/{{ page.name | remove: '.md' }}/{{ include.src }}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- assign image_webp = image_path | split: '.' | first | append: '.webp' -%}
 {%- assign webp_exists = site.static_files | where: "path", image_webp | first -%}
 
 {%- capture image_tag -%}
-    <picture>
-        {%- if webp_exists -%}
-        <source type="image/webp" srcset="{{ image_webp }}">
-        {%- endif -%}
-        <img src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}"
-            {% if include.loading %} loading="{{ include.loading }}" {% endif %}>
-    </picture>
+<picture>
+    {%- if webp_exists -%}
+    <source type="image/webp" srcset="{{ image_webp }}">
+    {%- endif -%}
+    <img src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}" {% if include.class %}
+        class="{{ include.class }}" {% endif %} {% if include.loading %} loading="{{ include.loading }}" {% endif %}>
+</picture>
 {%- endcapture -%}
 
 {%- if include.caption -%}
 <figure class="mb-8">
-    <a href="{{ image_folder }}{{ include.link | default: include.src }}" target="_blank">
+    <a href="/assets/img/{{ page.name | remove: '.md' }}/{{ include.href | default: include.src }}" target="_blank">
         {{ image_tag }}
     </a>
     <figcaption class="italic text-sm mt-3">
@@ -24,8 +31,8 @@
     </figcaption>
 </figure>
 {%- else -%}
-    {%- if include.link -%}
-    <a href="{{ image_folder }}{{ include.link | default: include.src }}" target="_blank">
+    {%- if include.href -%}
+    <a href="/assets/img/{{ page.name | remove: '.md' }}/{{ include.href }}" target="_blank">
         {{ image_tag }}
     </a>
     {%- else -%}
