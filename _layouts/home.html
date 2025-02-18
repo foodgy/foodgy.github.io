@@ -12,7 +12,7 @@ layout: base
         <h2 class="font-sans-serif {{ color | default: 'text-violet-900/80 dark:text-violet-300' }} font-black text-2.5xl">
           {{- post.headline | default:post.title -}}
         </h2>
-        <small class="text-gray-700 dark:text-gray-300">
+        <div class="text-80 my-1 text-gray-700 dark:text-gray-300">
           {{- post.date | date: '%-d' | append: "&nbsp;" -}}
           {%- assign month_number = post.date | date: '%-m' -%}
           {%- case month_number -%}
@@ -30,8 +30,8 @@ layout: base
             {%- when '12' -%}декабря
           {%- endcase -%}
           {{- post.date | date: '%Y' | prepend: "&nbsp;" -}}
-        </small>
-        <p class="mt-1">
+        </div>
+        <p>
           {{- post.tagline -}}
         </p>
       </a>

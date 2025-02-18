@@ -14,6 +14,7 @@ module.exports = {
                 'serif': ['Merriweather', 'serif'],
             },
             fontSize: {
+                '80': '80%',
                 '2.5xl': '1.75rem',
                 '4.5xl': '2.5rem',
             },

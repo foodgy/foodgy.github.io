@@ -7,29 +7,33 @@ layout: base
     <h1 class="font-sans-serif font-black text-4.5xl leading-11 dark:text-white mb-2">
       {{- page.headline | default: page.title -}}
     </h1>
-    <small class="text-gray-700 dark:text-gray-300">
-      {%- assign page_date = page.last_modified_at | default: page.date -%}
-      {%- if page.last_modified_at -%}
-        <span>Обновлено </span>
-      {%- endif -%}
-      {{- page_date | date: '%-d' | append: "&nbsp;" -}}
-      {%- assign month_number = page_date | date: '%-m' -%}
-      {%- case month_number -%}
-        {%- when '1' -%}января
-        {%- when '2' -%}февраля
-        {%- when '3' -%}марта
-        {%- when '4' -%}апреля
-        {%- when '5' -%}мая
-        {%- when '6' -%}июня
-        {%- when '7' -%}июля
-        {%- when '8' -%}августа
-        {%- when '9' -%}сентября
-        {%- when '10' -%}октября
-        {%- when '11' -%}ноября
-        {%- when '12' -%}декабря
-      {%- endcase -%}
-      {{- page_date | date: '%Y' | prepend: "&nbsp;"  -}}
-    </small>
+    <div class="text-80 text-gray-700 dark:text-gray-300">
+      <span>
+        {%- assign page_date = page.last_modified_at | default: page.date -%}
+        {%- if page.last_modified_at -%}
+          Обновлено&nbsp;
+        {%- endif -%}
+        {{- page_date | date: '%-d' | append: "&nbsp;" -}}
+        {%- assign month_number = page_date | date: '%-m' -%}
+        {%- case month_number -%}
+          {%- when '1' -%}января
+          {%- when '2' -%}февраля
+          {%- when '3' -%}марта
+          {%- when '4' -%}апреля
+          {%- when '5' -%}мая
+          {%- when '6' -%}июня
+          {%- when '7' -%}июля
+          {%- when '8' -%}августа
+          {%- when '9' -%}сентября
+          {%- when '10' -%}октября
+          {%- when '11' -%}ноября
+          {%- when '12' -%}декабря
+        {%- endcase -%}
+        {{- page_date | date: '%Y' | prepend: "&nbsp;"  -}}
+      </span>
+      {%- assign reading_time = page.content | number_of_words | divided_by: 180 | append: '&nbsp;мин.' -%}
+      <span class="before:content-['\00a0\00a0\2022\00a0\00a0']">{{ reading_time }}</span>
+    </div>
     <div class="markdown leading-7 mt-10">
       {{ content }}
     </div>
