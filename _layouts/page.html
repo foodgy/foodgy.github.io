@@ -1,15 +1,15 @@
 ---
 layout: base
 ---
-{% include header.html %}
+{%- include header.html -%}
 <main>
-  <article>
-    <h1 class="font-sans-serif font-black text-4.5xl leading-11 dark:text-white">
-      {{- page.headline | default:post.title -}}
-    </h1>
-    <div class="markdown mt-10">
-      {{ content }}
-    </div>
-  </article>
-  {% include footer.html %}
+    <article>
+        <h1 class="font-sans-serif font-black text-4.5xl leading-11 dark:text-white">
+            {{- page.headline | default:post.title -}}
+        </h1>
+        <div class="markdown mt-10">
+            {{ content }}
+        </div>
+    </article>
 </main>
+{%- include footer.html -%}

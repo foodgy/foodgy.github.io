@@ -16,15 +16,14 @@
     {%- if webp_exists -%}
     <source type="image/webp" srcset="{{ image_webp }}">
     {%- endif -%}
-    <img src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}" {% if include.class %}
-        class="{{ include.class }}" {% endif %} {% if include.loading %} loading="{{ include.loading }}" {% endif %}>
+    <img src="{{ image_path }}" alt="{{ include.alt | default: include.caption }}" {%- if include.class %} class="{{ include.class }}" {%- endif %}{%- if include.loading %} loading="{{ include.loading }}" {%- endif %}>
 </picture>
 {%- endcapture -%}
 
 {%- if include.caption -%}
 <figure class="mb-8">
     <a href="/assets/img/{{ page.name | remove: '.md' }}/{{ include.href | default: include.src }}" target="_blank">
-        {{ image_tag }}
+        {{ image_tag | strip_newlines }}
     </a>
     <figcaption class="italic text-sm mt-3">
         {{ include.caption }}
@@ -33,13 +32,13 @@
 {%- else -%}
     {%- if include.href -%}
     <a href="/assets/img/{{ page.name | remove: '.md' }}/{{ include.href }}" target="_blank">
-        {{ image_tag }}
+        {{ image_tag | strip_newlines }}
     </a>
     {%- else -%}
         {%- if is_post_image == "false" -%}
-            {{ image_tag }}
+            {{ image_tag | strip_newlines }}
         {%- else -%}
-            <p>{{ image_tag }}</p>
+            <p>{{ image_tag | strip_newlines }}</p>
         {%- endif -%}
     {%- endif -%}
 {%- endif -%}
