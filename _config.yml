@@ -1,4 +1,4 @@
-url: "https://romakoch.com"
+url: https://romakoch.com
 
 title: romakoch
 description: >-
@@ -6,22 +6,23 @@ description: >-
 
 author:
   name: Роман Кох
-  image: "/assets/img/author.png"
+  image: /assets/img/author.png
   email: mail@romakoch.com
   description: >- 
     Роман Кох — эксперт в области электронной коммерции с более чем 15-летним опытом, пишет о менеджменте, e-commerce и методах продуктивности.
+  job_title: Head of E-commerce
 
-privacy_policy: "/assets/pdf/privacy_policy.pdf"
+privacy_policy: /assets/pdf/privacy_policy.pdf
 
 google_tag_manager: GTM-MF37N24
 
 social_links:
-  - { title: linkedin, visible: true, user_url: "https://www.linkedin.com/in/fatnotbad/" }
-  - { title: habr, visible: false, user_url: "https://habr.com/ru/users/FatNotBad/" }
-  - { title: vc, visible: false, user_url: "https://vc.ru/u/245143-roman-koh" }
-  - { title: e-xecutive, visible: false, user_url: "https://www.e-xecutive.ru/users/1898956-roman-koh" }
+  - { title: linkedin, visible: true, user_url: https://www.linkedin.com/in/fatnotbad/ }
+  - { title: habr, visible: false, user_url: https://habr.com/ru/users/FatNotBad/ }
+  - { title: vc, visible: false, user_url: https://vc.ru/u/245143-roman-koh }
+  - { title: e-xecutive, visible: false, user_url: https://www.e-xecutive.ru/users/1898956-roman-koh }
 
-permalink: "/blog/:title/"
+permalink: /blog/:title/
 
 feed:
   excerpt_only: true
