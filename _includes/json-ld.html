@@ -112,7 +112,7 @@
 
 <script type="application/ld+json">
     {%- if jekyll.environment == 'production' -%}
-        {{- schema_markup | strip_newlines | remove:  "    " -}}
+        {{ schema_markup | strip_newlines | remove:  "    " }}
     {%- else -%}
         {{ schema_markup }}
     {%- endif -%}
