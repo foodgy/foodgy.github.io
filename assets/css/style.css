@@ -4,29 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --bg-color: #fff;
-    --primary-color: #ec4899;
-    --callout-bg-color: #e5e7eb;
-    --shadow-color: rgba(210, 214, 220, 0.5);
-    --code-bg-color: #232936;
-    --code-color: #e6e6e6;
-    --inline-code-bg-color: rgba(255, 229, 100, 0.2);
-    --inline-code-color: #1a1a1a;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
     :root {
-        --bg-color: #282c35;
-        --primary-color: #f9a8d4;
-        --callout-bg-color: rgba(115, 124, 153, 0.2);
-        --shadow-color: rgba(26, 26, 27, 0.637);
-        --code-bg-color: #191d27;
-        --inline-code-bg-color: rgba(115, 124, 153, 0.2);
-        --inline-code-color: #e6e6e6;
+        --bg-color: #fff;
+        --primary-color: #ec4899;
+        --callout-bg-color: #e5e7eb;
+        --shadow-color: rgba(210, 214, 220, 0.5);
+        --code-bg-color: #232936;
+        --code-color: #e6e6e6;
+        --inline-code-bg-color: rgba(255, 229, 100, 0.2);
+        --inline-code-color: #1a1a1a;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: #282c35;
+            --primary-color: #f9a8d4;
+            --callout-bg-color: #373C49;
+            --shadow-color: rgba(26, 26, 27, 0.637);
+            --code-bg-color: #191d27;
+            --inline-code-bg-color: #373C49;
+            --inline-code-color: #e6e6e6;
+        }
     }
 }
-
 .markdown {
 
     h2,
@@ -176,8 +177,8 @@
         @apply italic;
         @apply border-l-4;
         @apply border-solid;
-        @apply opacity-80;
         @apply border-neutral-900;
+        @apply opacity-80;
         @apply mb-8;
         @apply pl-4;
         @apply dark:border-l-inherit;

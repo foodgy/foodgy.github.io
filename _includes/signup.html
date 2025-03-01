@@ -1,16 +1,16 @@
-<div class="font-sans p-5 my-20 bg-gray-200 dark:bg-[--callout-bg-color] rounded-xl shadow-framed">
+<div class="font-sans p-5 my-20 bg-gray-200 rounded-xl shadow-framed dark:bg-[--callout-bg-color]">
     <form id="newsletter-signup" action="https://form.senderclick.net/api/v1/subscribe-form/create?hash=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZEZvcm0iOjIxNjUsImlkVXNlciI6MTEzNzYsImlkR3JvdXBDb250YWN0cyI6MTczNjYsImlhdCI6MTczNzIxMDY5MX0.WlrzAC11E_vb9TQTwteJWhv-Zj4dJm-lt6aIA1sIb1Q" method="post">
         <div class="grid gap-4 grid-cols-1 md:grid-cols-7 mb-3">
             <div class="md:col-span-5">
-                <input class="w-full p-2.5 border rounded-lg border-gray-300 dark:border-transparent bg-white dark:bg-gray-500/60 outline-none focus:ring-1 focus:ring-pink-500/90 focus:border-pink-500/90 dark:placeholder:text-gray-300/85" type="email" name="email" placeholder="Оставь e-mail, остальное за мной ✌️" required>
+                <input class="w-full p-2.5 border rounded-lg border-gray-300 bg-white outline-none focus:ring-1 focus:ring-pink-500/90 focus:border-pink-500/90 dark:bg-gray-500/60 dark:border-transparent dark:placeholder:text-gray-300/85" type="email" name="email" placeholder="Оставь e-mail, остальное за мной ✌️" required>
             </div>
             <div class="md:col-span-2">
                 <button class="w-full py-2.5 px-5 text-white/90 border rounded-lg border-transparent bg-pink-500/90 hover:bg-pink-600/85" type="submit" form="newsletter-signup">Подписаться</button>
             </div>
         </div>
         <div class="flex md:items-center items-start">
-            <input id="checkbox" class="size-4 border border-gray-300 dark:border-transparent rounded bg-white dark:bg-gray-500/60 accent-pink-500/90 appearance-none checked:appearance-auto" type="checkbox" required>
-            <label class="ml-2 text-xs text-gray-500/70 dark:text-gray-400 select-none" for="checkbox">Даю согласие на обработку <a class="border-b border-gray-500/70 dark:border-gray-400 hover:border-0" href="{{ site.privacy_policy }}" target="_blank" rel="nofollow">персональных данных</a></label>
+            <input id="checkbox" class="size-4 border border-gray-300 rounded bg-white accent-pink-500/90 appearance-none checked:appearance-auto dark:bg-gray-500/60 dark:border-transparent" type="checkbox" required>
+            <label class="ml-2 text-xs select-none text-gray-500/70 dark:text-gray-400" for="checkbox">Даю согласие на обработку <a class="border-b border-gray-500/70 dark:border-gray-400 hover:border-0" href="{{ site.privacy_policy }}" target="_blank" rel="nofollow">персональных данных</a></label>
         </div>
     </form>
     <script>

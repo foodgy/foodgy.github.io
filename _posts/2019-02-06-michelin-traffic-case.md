@@ -62,14 +62,61 @@ tagline: "Кейс продвижения интернет-магазина ко
 
 Кроме того, франшиза **Tyreplus** решила сменить гайдлайны с&nbsp;синих цветов на&nbsp;зелёные. Достойная причина для инициации редизайна и&nbsp;отличная возможность поработать над UI/UX.
 
-В&nbsp;декабре 2017 [tyreplus.ru](https://tyreplus.ru){:target="_blank"} полностью обновил свой внешний вид и&nbsp;обзавёлся адаптивной вёрсткой:
+В&nbsp;декабре 2017 [tyreplus.ru](https://tyreplus.ru){:target="_blank"} полностью обновил свой внешний вид и&nbsp;обзавёлся адаптивной вёрсткой.
 
-{% include image.html
-    src="redesign-hp.jpg"
-    href="redesign-hp-full.jpg"
-    caption="Старый дизайн vs новый"
-    loading="lazy"
-%}
+<div class="mb-8">
+    <div class="mb-5 flex justify-center">
+        <label class="inline-flex items-center font-sans cursor-pointer select-none" for="toggler">
+            <span class="mr-3">Старый</span>
+            <input id="toggler" type="checkbox" class="peer sr-only" checked />
+            <span class="relative h-7 w-12 rounded-full bg-gray-200 transition-all duration-200 ring-offset-[--bg-color] after:absolute after:inset-0.5 after:h-6 after:w-6 after:rounded-full after:bg-[--bg-color] after:transition-all after:duration-200 after:content-[''] peer-checked:bg-[--primary-color] peer-checked:after:translate-x-5 dark:bg-gray-500 rtl:peer-checked:after:-translate-x-full"></span>
+            <span class="ml-3">Новый</span>
+        </label>
+    </div>
+    <figure class="bg-[--callout-bg-color] rounded-xl shadow-framed overflow-hidden">
+        <div class="p-2 flex items-center">
+            <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+            </div>
+        </div>
+        <div class="px-2 pb-2">
+            <div class="toggle-item">
+                {% include image.html
+                    src="new-design.jpg"
+                    href="new-design.jpg"
+                    alt="Новый дизайн Tyreplus.ru"
+                    class="!rounded-md"
+                    loading="lazy"
+                %}
+            </div>
+            <div class="toggle-item invisible h-0">
+                {% include image.html
+                    src="old-design.jpg"
+                    href="old-design.jpg"
+                    alt="Старый дизайн Tyreplus.ru"
+                    class="!rounded-md"
+                    loading="lazy"
+                %}
+            </div>
+        </div>
+    </figure>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggler = document.getElementById('toggler');
+        const items = document.querySelectorAll('.toggle-item');
+        
+        toggler.addEventListener('change', () => {
+            items.forEach(item => {
+                item.classList.toggle('invisible');
+                item.classList.toggle('h-0');
+            });
+        });
+    });
+</script>
 
 Помимо визуальных красивостей была проделана работа над улучшением юзабилити: упрощён интерфейс каталогов, товарных страниц, корзины и&nbsp;чекаута.
 
