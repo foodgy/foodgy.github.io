@@ -4,12 +4,18 @@
     "itemListElement": [{
         "@type": "ListItem",
         "position": 1,
+        "name": "romakoch",
+        "item": {{ site.url | absolute_url | jsonify }}
+    },
+    {
+        "@type": "ListItem",
+        "position": 2,
         "name": "🚀 Экспертное мнение",
         "item": {{ site.url | append: '/#' | absolute_url | jsonify }}
     },
     {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "name": {{ page.headline | default:page.title | markdownify | strip_html | strip_newlines | jsonify }},
         "item": {{ page.url | absolute_url | jsonify }}
     }]
@@ -111,5 +117,5 @@
 {%- endcapture -%}
 
 <script type="application/ld+json">
-    {{ schema_markup | strip_newlines | remove:  "    " }}
+    {{- schema_markup | strip_newlines | remove:  "    " -}}
 </script>
