@@ -54,8 +54,7 @@
     }
 
     a {
-        @apply border-b;
-        @apply border-[--primary-color];
+        @apply border-b border-[--primary-color];
         @apply text-[--primary-color];
         @apply hover:border-none;
     }
@@ -73,8 +72,7 @@
     >ul,
     >ol {
         @apply ml-7 mb-7;
-        @apply list-outside;
-        @apply list-image-none;
+        @apply list-outside list-image-none;
 
         li {
             @apply mb-3.5;
@@ -90,14 +88,10 @@
     }
 
     table {
-        @apply font-sans;
-        @apply text-sm;
-        @apply whitespace-nowrap;
+        @apply font-sans text-sm whitespace-nowrap;
         @apply w-full;
         @apply bg-white;
-        @apply border-separate;
-        @apply border-spacing-0;
-        @apply rounded-xl;
+        @apply border-separate border-spacing-0 rounded-xl;
         @apply mb-8;
         @apply shadow-framed;
         @apply dark:bg-[--callout-bg-color];
@@ -105,14 +99,10 @@
         tr {
         
             th {
-                @apply text-gray-500;
-                @apply text-xs;
-                @apply text-left;
-                @apply uppercase;
+                @apply text-xs text-left text-gray-500 uppercase;
                 @apply bg-gray-200;
                 @apply px-4 py-3; 
-                @apply dark:text-gray-300/85;
-                @apply dark:bg-gray-500/60;
+                @apply dark:text-gray-300/85 dark:bg-gray-500/60;
                 @apply first:rounded-tl-xl;
                 @apply last:rounded-tr-xl;
             }
@@ -121,8 +111,7 @@
                 @apply px-4 py-3;
                 @apply first:border-l;
                 @apply last:border-r;
-                @apply dark:border-x-transparent;
-                @apply dark:border-y-gray-500/25;
+                @apply dark:border-x-transparent dark:border-y-gray-500/25;
             }
 
             &:nth-child(even) {
@@ -136,10 +125,8 @@
 
                 td {
                     @apply border-b;
-                    @apply first:rounded-bl-xl;
-                    @apply first:border-l;
-                    @apply last:rounded-br-xl;
-                    @apply last:border-r;
+                    @apply first:rounded-bl-xl first:border-l;
+                    @apply last:rounded-br-xl last:border-r;
                     @apply dark:border-b-transparent;
                 }
             }
@@ -175,9 +162,7 @@
 
     .quote {
         @apply italic;
-        @apply border-l-4;
-        @apply border-solid;
-        @apply border-neutral-900;
+        @apply border-l-4 border-solid border-neutral-900;
         @apply opacity-80;
         @apply mb-8;
         @apply pl-4;
@@ -186,10 +171,7 @@
 
     .callout {
         @apply bg-[--callout-bg-color];
-        @apply border-solid;
-        @apply border-l-4;
-        @apply border-[--primary-color];
-        @apply rounded-r-xl;
+        @apply border-l-4 border-solid border-[--primary-color] rounded-r-xl;
         @apply py-3 px-4;
         @apply mb-8;
         @apply shadow-framed;
