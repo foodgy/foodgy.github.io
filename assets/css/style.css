@@ -56,7 +56,7 @@
     a {
         @apply border-b border-[--primary-color];
         @apply text-[--primary-color];
-        @apply hover:border-none;
+        @apply hover:border-transparent;
     }
 
     img {
