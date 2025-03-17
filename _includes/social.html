@@ -1,16 +1,16 @@
 <ul class="flex">
-    <li class="flex ml-auto order-1">
-        <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            rss
-        </a>
-    </li>
     {%- for entry in site.social_links -%}
     {%- if entry.visible -%}
-    <li class="flex after:content-['\00a0\00a0\2022\00a0\00a0'] last:after:content-['']">
-        <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" title="{{ entry.title }}" target="_blank" href="{{ entry.user_url }}" rel="me noreferrer">
+    <li class="flex items-center first:before:content-none before:content-[''] before:w-2 before:h-2 before:align-middle before:mx-3 before:border-2 before:rounded-full before:border-zinc-800 dark:before:border-white/90">
+        <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-transparent" title="{{ entry.title }}" target="_blank" href="{{ entry.user_url }}" rel="me noreferrer">
             {{- entry.title -}}
         </a>
     </li>
     {%- endif -%}
     {%- endfor -%}
+    <li class="ml-auto order-last">
+        <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-transparent" href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            rss
+        </a>
+    </li>
 </ul>
