@@ -13,7 +13,7 @@ layout: base
             {{- post.headline | default:post.title -}}
             </h2>
             <div class="text-80 my-1 text-gray-700 dark:text-gray-300">
-            {{- post.date | date: '%-d' | append: "&nbsp;" -}}
+            {{- post.date | date: '%-d' | append: '&nbsp;' -}}
             {%- assign month_number = post.date | date: '%-m' -%}
             {%- case month_number -%}
                 {%- when '1' -%}января
@@ -29,7 +29,7 @@ layout: base
                 {%- when '11' -%}ноября
                 {%- when '12' -%}декабря
             {%- endcase -%}
-            {{- post.date | date: '%Y' | prepend: "&nbsp;" -}}
+            {{- post.date | date: '%Y' | prepend: '&nbsp;' -}}
             </div>
             <p>
             {{- post.tagline -}}

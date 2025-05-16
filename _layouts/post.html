@@ -13,7 +13,7 @@ layout: base
                 {%- if page.last_modified_at -%}
                 Обновлено&nbsp;
                 {%- endif -%}
-                {{- page_date | date: '%-d' | append: "&nbsp;" -}}
+                {{- page_date | date: '%-d' | append: '&nbsp;' -}}
                 {%- assign month_number = page_date | date: '%-m' -%}
                 {%- case month_number -%}
                 {%- when '1' -%}января
@@ -29,9 +29,9 @@ layout: base
                 {%- when '11' -%}ноября
                 {%- when '12' -%}декабря
                 {%- endcase -%}
-                {{- page_date | date: '%Y' | prepend: "&nbsp;"  -}}
+                {{- page_date | date: '%Y' | prepend: '&nbsp;'  -}}
             </span>
-            {%- assign reading_time = page.content | number_of_words | divided_by: 180 | append: '&nbsp;мин.' -%}
+            {%- assign reading_time = page.content | strip_html | replace: ' ', ' ' | number_of_words | divided_by: 180 | append: '&nbsp;мин.' -%}
             <span class="before:content-[''] before:inline-block before:w-2 before:h-2 before:align-middle before:mx-3 before:border-2 before:border-[--primary-color] before:rounded-full">{{ reading_time }}</span>
         </div>
         <div class="markdown leading-7 mt-10">

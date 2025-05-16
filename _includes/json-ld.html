@@ -82,7 +82,7 @@
                     "@type": "WebPage",
                     "@id": {{ page.url | absolute_url | jsonify }}
                 },
-                "wordCount": {{ page.content | number_of_words | jsonify }},
+                "wordCount": {{ page.content | strip_html | replace: ' ', ' ' | number_of_words | jsonify }},
                 {%- assign my_array = '' | split: ', ' -%}
                 {%- assign page_assets = '/assets/img/' | append: page.name | remove: '.md' | append: '/' -%}
                 {% for image in site.static_files %}
