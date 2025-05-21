@@ -16,16 +16,16 @@ last_modified_at: "2025-01-05"
         <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/svg+xml">
         <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}?v={{ site.time | date:'%s' }}" type="image/png" sizes="329x329">
         <style>
-        body {
-            max-width:42rem;
-            padding:0 1.25rem;
-            margin: 0 auto;
-        }
-        div {
-            display:flex;
-            flex-wrap:wrap;
-            place-content:space-between;
-        }
+            body {
+                max-width:42rem;
+                padding:0 1.25rem;
+                margin: 0 auto;
+            }
+            nav {
+                display:flex;
+                flex-wrap:wrap;
+                place-content:space-between;
+            }
         </style>
         {%- include json-ld.html -%}
         {%- if jekyll.environment == 'production' and site.google_tag_manager -%}
@@ -33,10 +33,10 @@ last_modified_at: "2025-01-05"
         {%- endif -%}
     </head>
     <body>
-        <div>
+        <nav>
             <p><a href="{{ site.url | absolute_url }}">&lt; Главная</a></p>
             <p>Страница без дизайна&nbsp;&mdash; так и&nbsp;задумано!</p>
-        </div>
+        </nav>
 
         <h1 id="section">Роман Кох</h1>
 
