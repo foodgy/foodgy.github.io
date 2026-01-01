@@ -1,12 +1,39 @@
 ---
 layout: post
-title: "Что такое метод PARA и как его использовать для организации заметок"
+title: "Метод PARA: как использовать систему Тьяго Форте для организации заметок"
 description: "Как с помощью метода PARA организовать свою жизнь, повысить продуктивность и снизить стресс."
 headline: "Метод PARA&nbsp;&mdash; эффективная система организации заметок"
 tagline: "Простой способ организовать свою цифровую жизнь."
+last_modified_at: "2026-01-01"
 ---
 
 Ежедневно мы&nbsp;сталкиваемся с&nbsp;огромным количеством данных, будь&nbsp;то в&nbsp;профессиональной сфере или в&nbsp;личной жизни. Для эффективного управления этим потоком и&nbsp;повышения личной продуктивности была создана система **PARA**.
+
+<nav>
+    <details class="font-sans callout">
+        <summary class="select-none">Содержание</summary>
+        <ol class="list-decimal leading-8 pl-8 my-4">
+            <li>
+                <a href="#что-такое-метод-para">Что такое метод PARA</a>
+                <ol class="my-2 list-decimal list-inside">
+                    <li><a href="#1-projects-проекты">Projects (Проекты)</a></li>
+                    <li><a href="#2-areas-области">Areas (Области)</a></li>
+                    <li><a href="#3-resources-ресурсы">Resources (Ресурсы)</a></li>
+                    <li><a href="#4-archive-архив">Archive (Архив)</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#как-использовать-метод-para">Как использовать метод PARA</a>
+                <ol class="my-2 list-decimal list-inside">
+                    <li><a href="#создайте-основные-категории">Создайте основные категории</a></li>
+                    <li><a href="#распределите-заметки-покатегориям">Распределите заметки по&nbsp;категориям</a></li>
+                    <li><a href="#обновляйте-идополняйте-заметки">Обновляйте и&nbsp;дополняйте заметки</a></li>
+                </ol>
+            </li>
+            <li><a href="#финальное">Финальное</a></li>
+        </ol>
+    </details>
+</nav>
 
 {% include image.html
     src="para-intro.png"
