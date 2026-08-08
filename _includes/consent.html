@@ -1,0 +1,17 @@
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    var match = document.cookie.match(/(?:^|; )_cp=([^;]*)/);
+    var consentState = (match && match[1] === 'granted') ? 'granted' : 'denied';
+
+    gtag('consent', 'default', {
+        ad_storage: consentState,
+        analytics_storage: consentState,
+        ad_user_data: consentState,
+        ad_personalization: consentState,
+        wait_for_update: 500
+    });
+
+    window.dataLayer.push({ event: 'consent_state_ready', consent_state: consentState });
+</script>
