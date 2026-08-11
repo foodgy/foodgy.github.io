@@ -7,11 +7,13 @@ sitemap: false
 # Allow crawling of all content
 User-agent: *
 Disallow: /*?
+Disallow: /privacy
 Disallow: /*.pdf$
 
 # Yandex Only
 User-agent: Yandex
 Disallow: /*?
+Disallow: /privacy
 Disallow: /*.pdf$
 
 Sitemap: {{ site.url }}/sitemap.xml
