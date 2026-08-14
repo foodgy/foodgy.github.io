@@ -28,6 +28,7 @@ last_modified_at: "2025-01-05"
             }
         </style>
         {%- include json-ld.html -%}
+        {%- include consent.html -%}
         {%- if jekyll.environment == 'production' and site.google_tag_manager -%}
             {%- include gtm.html -%}
         {%- endif -%}
@@ -81,5 +82,9 @@ last_modified_at: "2025-01-05"
         <li><a href="https://vc.ru/u/245143-roman-koh" target="_blank" rel="nofollow noreferrer">vc.ru</a>;</li>
         <li><a href="https://www.e-xecutive.ru/users/1898956-roman-koh/articles" target="_blank" rel="nofollow noreferrer">e-xecutive.ru</a>.</li>
         </ul>
+
+        {%- if site.cookie_consent_banner -%}
+        {%- include cookie-banner.html -%}
+        {%- endif -%}
     </body>
 </html>

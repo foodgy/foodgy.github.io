@@ -3,15 +3,18 @@
     function gtag() { dataLayer.push(arguments); }
 
     var match = document.cookie.match(/(?:^|; )_cp=([^;]*)/);
-    var consentState = (match && match[1] === 'granted') ? 'granted' : 'denied';
+    var adState = (match && match[1] === 'granted') ? 'granted' : 'denied';
 
     gtag('consent', 'default', {
-        ad_storage: consentState,
-        analytics_storage: consentState,
-        ad_user_data: consentState,
-        ad_personalization: consentState,
+        // analytics_storage is granted unconditionally: Yandex Metrika / GA4 run as anonymized,
+        // statistical processing under 152-FZ art. 6(1)(9), which doesn't require consent by
+        // law (see privacy.html §8.5) — only the ad_* categories are gated behind the banner.
+        analytics_storage: 'granted',
+        ad_storage: adState,
+        ad_user_data: adState,
+        ad_personalization: adState,
         wait_for_update: 500
     });
 
-    window.dataLayer.push({ event: 'consent_state_ready', consent_state: consentState });
+    window.dataLayer.push({ event: 'consent_state_ready', consent_state: adState });
 </script>

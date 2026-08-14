@@ -15,6 +15,7 @@ author:
 privacy_policy: /privacy/
 
 google_tag_manager: GTM-MF37N24
+cookie_consent_banner: true
 
 social_links:
   - { title: linkedin, visible: true, user_url: https://www.linkedin.com/in/fatnotbad/ }
