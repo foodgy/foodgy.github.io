@@ -13,25 +13,28 @@
     <link rel="preload" href="/assets/fonts/merriweather-normal-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/montserrat-normal-cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/montserrat-normal-latin-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/css/style.css?v=1786488671">
-    <link rel="icon" href="/assets/img/favicon.svg?v=1786488671" type="image/svg+xml">
-    <link rel="icon" href="/assets/img/favicon.png?v=1786488671" type="image/png" sizes="329x329">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1786717477">
+    <link rel="icon" href="/assets/img/favicon.svg?v=1786717477" type="image/svg+xml">
+    <link rel="icon" href="/assets/img/favicon.png?v=1786717477" type="image/png" sizes="329x329">
     <link type="application/atom+xml" rel="alternate" href="https://romakoch.com/feed.xml" title="romakoch" /><script type="application/ld+json">{"@context": "https://schema.org","@graph": [{"@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "romakoch","item": "https://romakoch.com"},{"@type": "ListItem","position": 2,"name": "🚀 Экспертное мнение","item": "https://romakoch.com/#"},{"@type": "ListItem","position": 3,"name": "Метод PARA — эффективная система организации заметок","item": "https://romakoch.com/blog/para-method/"}]},{"@type": "BlogPosting","headline": "Метод PARA — эффективная система организации заметок","description": "Как с помощью метода PARA организовать свою жизнь, повысить продуктивность и снизить стресс.","mainEntityOfPage": {"@type": "WebPage","@id": "https://romakoch.com/blog/para-method/"},"wordCount": 791,"image": ["https://romakoch.com/assets/img/2024-07-08-para-method/para-example.png","https://romakoch.com/assets/img/2024-07-08-para-method/para-intro.png","https://romakoch.com/assets/img/2024-07-08-para-method/para-method.png","https://romakoch.com/assets/img/2024-07-08-para-method/para-workflow.png"],"datePublished": "2024-07-08T00:00:00+00:00","dateModified": "2026-01-01T00:00:00+00:00","author": {"@type": "Person","name": "Роман Кох","jobTitle": "Head of E-commerce","description": "Роман Кох — эксперт в области электронной коммерции с более чем 15-летним опытом, пишет о менеджменте, e-commerce и методах продуктивности.","url": "https://romakoch.com/about/","image": {"@type": "ImageObject","url": "https://romakoch.com/assets/img/author.png","width": 400,"height": 400},"sameAs": ["https://www.linkedin.com/in/fatnotbad/","https://habr.com/ru/users/FatNotBad/","https://vc.ru/u/245143-roman-koh","https://www.e-xecutive.ru/users/1898956-roman-koh"]},"publisher": {"@type": "Organization","name": "romakoch","url": "https://romakoch.com","logo": {"@type": "ImageObject","url": "https://romakoch.com/assets/img/favicon.png","width": 329,"height": 329}}}]}</script><script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
 
     var match = document.cookie.match(/(?:^|; )_cp=([^;]*)/);
-    var consentState = (match && match[1] === 'granted') ? 'granted' : 'denied';
+    var adState = (match && match[1] === 'granted') ? 'granted' : 'denied';
 
     gtag('consent', 'default', {
-        ad_storage: consentState,
-        analytics_storage: consentState,
-        ad_user_data: consentState,
-        ad_personalization: consentState,
+        // analytics_storage is granted unconditionally: Yandex Metrika / GA4 run as anonymized,
+        // statistical processing under 152-FZ art. 6(1)(9), which doesn't require consent by
+        // law (see privacy.html §8.5) — only the ad_* categories are gated behind the banner.
+        analytics_storage: 'granted',
+        ad_storage: adState,
+        ad_user_data: adState,
+        ad_personalization: adState,
         wait_for_update: 500
     });
 
-    window.dataLayer.push({ event: 'consent_state_ready', consent_state: consentState });
+    window.dataLayer.push({ event: 'consent_state_ready', consent_state: adState });
 </script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -303,6 +306,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </li>
         </ul>
     </nav>
-</footer>
-    </body>
+</footer><div id="cookie-consent" class="hidden fixed inset-x-5 bottom-5 z-50 md:right-auto md:max-w-md font-sans p-4 rounded-xl shadow-framed bg-gray-200 dark:bg-[--callout-bg-color]">
+    <div class="flex justify-between items-center gap-4">
+        <p class="text-sm text-zinc-800 dark:text-white/90">
+            Сайт использует <a class="border-b border-zinc-800/70 dark:border-white/70 hover:border-transparent" href="/privacy/" target="_blank" rel="nofollow">куки</a>.
+        </p>
+        <button id="cookie-consent-accept" type="button" class="shrink-0 py-1.5 px-4 text-sm text-gray-600 dark:text-white/90 border border-transparent rounded-lg bg-gray-300 hover:bg-gray-400/60 dark:bg-gray-500/60 dark:hover:bg-gray-500/40">
+            Окей
+        </button>
+    </div>
+</div>
+<script>
+    (function () {
+        var banner = document.getElementById('cookie-consent');
+        var match = document.cookie.match(/(?:^|; )_cp=([^;]*)/);
+
+        if (match && match[1] === 'granted') return;
+
+        banner.classList.remove('hidden');
+
+        document.getElementById('cookie-consent-accept').addEventListener('click', function () {
+            var date = new Date();
+            date.setTime(date.getTime() + (180 * 24 * 60 * 60 * 1000));
+            document.cookie = '_cp=granted; expires=' + date.toUTCString() + '; path=/';
+
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+            window.gtag('consent', 'update', {
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted'
+            });
+            window.dataLayer.push({ event: 'consent_state_ready', consent_state: 'granted' });
+
+            banner.remove();
+        });
+    })();
+</script>
+</body>
 </html>
